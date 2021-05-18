@@ -2,7 +2,6 @@ number_of_classes <- readline(prompt = "Enter number of classes: ")
 class_width <- ceiling((max(oscars$year_ceremony) - (min(oscars$year_ceremony))) / strtoi(number_of_classes))
 oscars <- read_excel("oscars.xlsx")
 
-# library(dplyr)
 year_ceremony <- cut(oscars$year_ceremony,
   unique(c(seq(min(oscars$year_ceremony),
     max(oscars$year_ceremony) + 1,
